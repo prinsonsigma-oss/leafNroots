@@ -1,8 +1,8 @@
 import Image from 'next/image'
-import { MessageCircle, Shield, Zap, Leaf } from 'lucide-react'
+import { MessageCircle, Flame, Shield, Zap, Leaf } from 'lucide-react'
 
 const benefits = [
-  { icon: Shield, label: 'Supports\nDigestion' },
+  { icon: Flame, label: 'Supports\nDigestion' },
   { icon: Shield, label: 'Boosts\nImmunity' },
   { icon: Zap, label: 'Natural\nEnergy Boost' },
   { icon: Leaf, label: 'Promotes\nWellness' },

@@ -1,11 +1,11 @@
 import Image from 'next/image'
-import { Leaf } from 'lucide-react'
+import { Leaf, Sprout, Flame, Sparkles, Sun } from 'lucide-react'
 
 const sources = [
-  { label: 'Malenadu\nCardamom', icon: '🌿' },
-  { label: 'Kerala\nSpices', icon: '🌶️' },
-  { label: 'Kashmir\nSaffron', icon: '🌸' },
-  { label: 'South India\nLemons', icon: '🍋' },
+  { label: 'Malenadu\nCardamom', icon: Sprout },
+  { label: 'Kerala\nSpices', icon: Flame },
+  { label: 'Kashmir\nSaffron', icon: Sparkles },
+  { label: 'South India\nLemons', icon: Sun },
 ]
 
 export default function OurStory() {
@@ -63,10 +63,10 @@ export default function OurStory() {
 
           {/* Source icons */}
           <div className="grid grid-cols-4 gap-4 pt-4">
-            {sources.map(({ label, icon }) => (
+            {sources.map(({ label, icon: Icon }) => (
               <div key={label} className="flex flex-col items-center text-center gap-2">
-                <div className="w-14 h-14 rounded-full bg-muted flex items-center justify-center text-2xl">
-                  {icon}
+                <div className="w-14 h-14 rounded-full bg-muted flex items-center justify-center text-primary">
+                  <Icon size={22} strokeWidth={1.5} />
                 </div>
                 <p className="text-xs font-semibold text-foreground whitespace-pre-line leading-tight">{label}</p>
               </div>
