@@ -35,7 +35,7 @@ export default function WhyChoose() {
         {/* Heading */}
         <div className="flex items-center justify-center gap-3 mb-10">
           <Leaf size={16} className="text-primary" />
-          <h2 className="text-2xl lg:text-3xl font-bold text-foreground tracking-wide uppercase text-center" style={{ fontFamily: 'var(--font-playfair)' }}>
+          <h2 className="text-2xl lg:text-3xl font-bold text-foreground tracking-wide text-center" style={{ fontFamily: 'var(--font-playfair)' }}>
             Why Choose Leaf n Roots?
           </h2>
           <Leaf size={16} className="text-primary" />

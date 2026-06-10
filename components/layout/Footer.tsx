@@ -27,27 +27,36 @@ export default function Footer() {
           {/* Brand */}
           <div className="space-y-4">
             <div className="flex items-center gap-2">
-              <div className="w-12 h-12 rounded-full border-2 border-accent flex items-center justify-center">
+              {/* <div className="w-12 h-12 rounded-full border-2 border-accent flex items-center justify-center">
                 <span className="text-accent font-bold text-lg" style={{ fontFamily: 'var(--font-playfair)' }}>LR</span>
-              </div>
-              <div>
+              </div> */}
+              {/* <div>
                 <p className="font-bold text-base" style={{ fontFamily: 'var(--font-playfair)' }}>
                   LEAF<span className="text-accent">n</span>ROOTS
                 </p>
                 <p className="text-xs opacity-70">Drop of Wellness</p>
+              </div> */}
+              <div>
+                <img
+                  src="/images/logo.png"
+                  alt="Leaf n Roots Logo"
+                  className="h-16 w-auto"
+                />
               </div>
             </div>
             <p className="text-sm opacity-80 leading-relaxed">
               {"Nature's goodness in every drop. Premium wellness extracts crafted for a better you."}
             </p>
             <div className="flex items-center gap-3">
-              <a href="#" aria-label="WhatsApp" className="opacity-70 hover:opacity-100 hover:text-accent transition-all">
+              <a href="https://wa.me/917619610605"
+                target="_blank"
+                rel="noopener noreferrer" aria-label="WhatsApp" className="opacity-70 hover:opacity-100 hover:text-accent transition-all">
                 <WhatsAppIcon size={18} />
               </a>
-              <a href="#" aria-label="Instagram" className="opacity-70 hover:opacity-100 hover:text-accent transition-all">
+              <a href="https://instagram.com/leafnroots.natural" aria-label="Instagram" className="opacity-70 hover:opacity-100 hover:text-accent transition-all">
                 <InstagramIcon size={18} />
               </a>
-              <a href="#" aria-label="Facebook" className="opacity-70 hover:opacity-100 hover:text-accent transition-all">
+              <a href="https://facebook.com/leafnroots.natural" aria-label="Facebook" className="opacity-70 hover:opacity-100 hover:text-accent transition-all">
                 <FacebookIcon size={18} />
               </a>
             </div>
@@ -131,7 +140,7 @@ export default function Footer() {
       {/* Bottom bar */}
       <div className="border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 py-4 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs opacity-60">
-          <span>© 2024 Leaf n Roots. All Rights Reserved.</span>
+          <span>© 2026 Leaf n Roots. All Rights Reserved.</span>
           <div className="flex items-center gap-4">
             <Link href="/contact" className="hover:opacity-100 transition-opacity">Privacy Policy</Link>
             <Link href="/contact" className="hover:opacity-100 transition-opacity">Terms &amp; Conditions</Link>

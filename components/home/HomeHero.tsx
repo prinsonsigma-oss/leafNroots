@@ -60,7 +60,7 @@ export default function HomeHero() {
 
         {/* Hero image */}
         <div className="relative flex justify-center lg:justify-end">
-          <div className="relative w-full max-w-lg aspect-square rounded-2xl overflow-hidden shadow-2xl">
+          <div className="relative w-full max-w-lg aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl">
             <Image
               src="/images/hero-spices.png"
               alt="Leaf n Roots — premium wellness extracts with Indian spices and herbs"
@@ -70,15 +70,15 @@ export default function HomeHero() {
             />
           </div>
           {/* Floating badge */}
-          <div className="absolute -bottom-4 left-4 lg:left-0 bg-card border border-border rounded-xl px-4 py-3 shadow-lg flex items-center gap-3">
+          {/* <div className="absolute -bottom-4 left-4 lg:left-0 bg-card border border-border rounded-xl px-4 py-3 shadow-lg flex items-center gap-3">
             <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center shrink-0">
               <span className="text-primary-foreground font-bold text-sm" style={{ fontFamily: 'var(--font-playfair)' }}>LR</span>
             </div>
             <div>
-              <p className="text-xs font-bold text-foreground">LEAF<span className="text-accent">n</span>ROOTS</p>
+              <p className="text-xs font-bold text-foreground">LEAF<span className="text-accent">ndd</span>ROOTS</p>
               <p className="text-xs text-muted-foreground">Drop of Wellness</p>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

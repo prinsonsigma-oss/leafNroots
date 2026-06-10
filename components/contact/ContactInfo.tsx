@@ -1,10 +1,15 @@
-import { MapPin, Phone, Mail, Globe, Clock } from 'lucide-react'
+import { MapPin, Phone, Mail, Globe, Clock, } from 'lucide-react'
 
 const info = [
   {
     icon: MapPin,
     title: 'Our Location',
-    content: 'L&R Naturals, Willys Centre, Collectors Gate, Balmatta, Mangaluru – 575002, Karnataka, India.',
+    content: (
+      <>
+        <strong>L&R Naturals</strong>, Willys Centre, Collectors Gate, Balmatta,
+        Mangaluru – 575002, Karnataka, India.
+      </>
+    ),
   },
   {
     icon: Phone,
@@ -24,11 +29,12 @@ const info = [
     content: 'www.leafnroot.in',
     href: 'https://www.leafnroot.in',
   },
-  {
-    icon: Clock,
-    title: 'Business Hours',
-    content: 'Monday - Saturday: 9:30 AM - 6:30 PM\nSunday: Closed',
-  },
+  // {
+  //   icon: Clock,
+  //   title: 'Business Hours',
+  //   content: 'Monday - Saturday: 9:30 AM - 6:30 PM\nSunday: Closed',
+  // },
+
 ]
 
 export default function ContactInfo() {

@@ -22,6 +22,10 @@ export default function AboutHero() {
               fields of Kashmir, we carefully source {"nature's"} finest treasures and transform them into
               convenient drops of wellness.
             </p>
+            <p>
+              Our advanced extraction process captures the authentic aroma,flavor and goodness of each ingredients,delivering a premium
+              tea experience in every drop.
+            </p>
           </div>
           <Link
             href="/about"
@@ -35,7 +39,7 @@ export default function AboutHero() {
 
         {/* Image */}
         <div className="relative flex justify-center lg:justify-end">
-          <div className="relative w-full max-w-lg aspect-square rounded-2xl overflow-hidden shadow-2xl">
+          <div className="relative w-full max-w-lg aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl">
             <Image
               src="/images/hero-spices.png"
               alt="Leaf n Roots wellness extracts with Indian spices and golden drop"

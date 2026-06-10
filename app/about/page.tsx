@@ -24,6 +24,7 @@ export default function AboutPage() {
         <OurStory />
         <MissionVision />
         <WhyChoose />
+
       </main>
       <Footer />
     </div>

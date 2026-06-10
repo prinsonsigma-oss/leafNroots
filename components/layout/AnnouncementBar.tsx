@@ -45,10 +45,10 @@ export default function AnnouncementBar() {
             <span>+91 76196 10605</span>
           </a>
           <div className="flex items-center gap-2">
-            <a href="#" aria-label="Facebook" className="opacity-80 hover:opacity-100 transition-opacity">
+            <a href="https://facebook.com/leafnroots.natural" aria-label="Facebook" className="opacity-80 hover:opacity-100 transition-opacity">
               <FacebookIcon size={13} />
             </a>
-            <a href="#" aria-label="Instagram" className="opacity-80 hover:opacity-100 transition-opacity">
+            <a href="https://instagram.com/leafnroots.natural" aria-label="Instagram" className="opacity-80 hover:opacity-100 transition-opacity">
               <InstagramIcon size={13} />
             </a>
           </div>

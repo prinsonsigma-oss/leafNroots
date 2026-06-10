@@ -36,7 +36,7 @@ export default function Header() {
     <header className="bg-background border-b border-border sticky top-0 z-50 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2 shrink-0">
+        {/* <Link href="/" className="flex items-center gap-2 shrink-0">
           <div className="w-12 h-12 rounded-full border-2 border-primary flex items-center justify-center bg-primary">
             <span className="text-primary-foreground font-bold text-lg leading-none" style={{ fontFamily: 'var(--font-playfair)' }}>LR</span>
           </div>
@@ -46,6 +46,13 @@ export default function Header() {
             </p>
             <p className="text-muted-foreground text-[10px] leading-none tracking-wider">Drop of Wellness</p>
           </div>
+        </Link> */}
+        <Link href="/" className="flex items-center gap-2 shrink-0">
+          <img
+            src="/images/logo.png"
+            alt="Leaf n Roots Logo"
+            className="h-16 w-auto"
+          />
         </Link>
 
         {/* Desktop Nav */}
@@ -60,11 +67,10 @@ export default function Header() {
               >
                 <Link
                   href={href}
-                  className={`flex items-center gap-1 text-sm font-medium transition-colors pb-0.5 ${
-                    isActive(href)
-                      ? 'text-primary border-b-2 border-primary'
-                      : 'text-foreground hover:text-primary'
-                  }`}
+                  className={`flex items-center gap-1 text-sm font-medium transition-colors pb-0.5 ${isActive(href)
+                    ? 'text-primary border-b-2 border-primary'
+                    : 'text-foreground hover:text-primary'
+                    }`}
                 >
                   {label}
                   <ChevronDown size={14} className="group-hover:rotate-180 transition-transform" />
@@ -87,11 +93,10 @@ export default function Header() {
               <Link
                 key={href}
                 href={href}
-                className={`text-sm font-medium transition-colors pb-0.5 ${
-                  isActive(href)
-                    ? 'text-primary border-b-2 border-primary'
-                    : 'text-foreground hover:text-primary'
-                }`}
+                className={`text-sm font-medium transition-colors pb-0.5 ${isActive(href)
+                  ? 'text-primary border-b-2 border-primary'
+                  : 'text-foreground hover:text-primary'
+                  }`}
               >
                 {label}
               </Link>

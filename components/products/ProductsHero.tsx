@@ -44,12 +44,12 @@ export default function ProductsHero() {
 
         {/* Image */}
         <div className="relative flex justify-center lg:justify-end">
-          <div className="relative w-full max-w-lg aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
+          <div className="relative w-full max-w-lg aspect-[4/3] rounded-2xl ">
             <Image
               src="/images/products-hero.png"
-              alt="Leaf n Roots — premium wellness extracts with Indian spices"
+              alt="Leaf n Roots"
               fill
-              className="object-cover"
+              className="object-contain scale-95"
               priority
             />
           </div>
