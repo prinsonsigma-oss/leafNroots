@@ -21,19 +21,7 @@ export default function OurStory() {
             className="object-cover"
           />
           {/* Overlay */}
-          <div className="absolute bottom-0 left-0 right-0 bg-accent/90 px-6 py-5">
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
-                <Leaf size={18} className="text-primary-foreground" />
-              </div>
-              <div>
-                <p className="text-xs text-primary-foreground/80 tracking-wider uppercase font-semibold">Sourced From</p>
-                <p className="text-primary-foreground font-bold text-base leading-tight" style={{ fontFamily: 'var(--font-playfair)' }}>
-                  {"India's Finest"}<br />Growing Regions
-                </p>
-              </div>
-            </div>
-          </div>
+          
         </div>
 
         {/* Right: Story Text */}

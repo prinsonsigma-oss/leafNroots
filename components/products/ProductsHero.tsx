@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import { Leaf, Ban, FlaskConical, MapPin } from 'lucide-react'
 
 const badges = [
@@ -10,48 +9,53 @@ const badges = [
 
 export default function ProductsHero() {
   return (
-    <section className="bg-background overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 py-12 lg:py-16 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-        {/* Text */}
-        <div className="space-y-6">
-          <p className="text-primary text-sm font-bold tracking-widest uppercase">Our Products</p>
+    <section
+      className="relative overflow-hidden bg-center bg-no-repeat"
+      style={{
+        backgroundImage: "url('/images/products-hero.png')",
+        backgroundSize: 'cover', // change to 90% if too zoomed
+      }}
+    >
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-black/45" />
+
+      {/* Content */}
+      <div className="relative z-10 max-w-7xl mx-auto px-4 py-16 lg:py-24">
+        <div className="max-w-3xl space-y-6 text-white">
+          <p className="text-yellow-300 text-sm font-bold tracking-widest uppercase">
+            Our Products
+          </p>
+
           <h1
-            className="text-4xl lg:text-5xl font-bold text-foreground leading-tight text-balance"
+            className="text-4xl lg:text-5xl font-bold leading-tight"
             style={{ fontFamily: 'var(--font-playfair)' }}
           >
             Wellness in{' '}
-            <em className="not-italic text-accent" style={{ fontFamily: 'var(--font-playfair)' }}>
+            <span className="text-green-300">
               Every Drop
-            </em>
+            </span>
           </h1>
-          <p className="text-muted-foreground leading-relaxed">
-            Carefully crafted wellness extracts made from {"India's"} finest spices, herbs and botanicals.
-            Just a few drops for a healthier you!
+
+          <p className="text-white/90 leading-relaxed max-w-2xl">
+            Carefully crafted wellness extracts made from India's finest spices,
+            herbs and botanicals. Just a few drops for a healthier you!
           </p>
 
           {/* Badges */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-2">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 pt-4">
             {badges.map(({ icon: Icon, label }) => (
-              <div key={label} className="flex flex-col items-center text-center gap-2">
-                <div className="w-11 h-11 rounded-full border-2 border-primary/30 bg-muted flex items-center justify-center text-primary">
-                  <Icon size={18} strokeWidth={1.5} />
+              <div
+                key={label}
+                className="flex flex-col items-center text-center gap-2"
+              >
+                <div className="w-12 h-12 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center">
+                  <Icon size={20} />
                 </div>
-                <p className="text-xs font-semibold text-foreground leading-tight">{label}</p>
+                <p className="text-xs font-semibold text-white">
+                  {label}
+                </p>
               </div>
             ))}
-          </div>
-        </div>
-
-        {/* Image */}
-        <div className="relative flex justify-center lg:justify-end">
-          <div className="relative w-full max-w-lg aspect-[4/3] rounded-2xl ">
-            <Image
-              src="/images/products-hero.png"
-              alt="Leaf n Roots"
-              fill
-              className="object-contain scale-95"
-              priority
-            />
           </div>
         </div>
       </div>
