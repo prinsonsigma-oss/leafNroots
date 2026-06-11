@@ -8,42 +8,49 @@ export const products = [
     name: 'Black Lemon Tea Extract',
     description: 'Refreshing blend of black tea and zesty lemon for a revitalizing experience.',
     image: '/images/product-black-lemon.png',
+    href: '/products/lemontea',
   },
   {
     id: 'irani-chai',
     name: 'Irani Chai Extract',
     description: 'Authentic Irani chai with a perfect blend of tea and traditional spices.',
     image: '/images/product-irani-chai.png',
+    href: '/products/iranichai',
   },
   {
     id: 'ginger',
     name: 'Ginger Extract',
     description: 'Pure ginger extract with natural warmth and bold taste.',
     image: '/images/product-ginger.png',
+    href: '/products/ginger',
   },
   {
     id: 'detox',
     name: 'Detox Extract',
     description: 'A refreshing blend of lemon, herbs and spices to support your daily detox.',
     image: '/images/product-detox.png',
+    href: '/products/detox',
   },
   {
     id: 'kashmir-kahwa',
     name: 'Kashmir Kahwa Extract',
     description: 'Traditional Kahwa with saffron, green tea and aromatic spices from Kashmir.',
     image: '/images/product-kashmir-kahwa.png',
+    href: '/products/kashmirkahwa',
   },
   {
     id: 'cardamom',
     name: 'Cardamom Extract',
-    description: 'Made from the finest Malnad cardamom for rich aroma and flavour.',
+    description: 'Made from the finest Malenadu cardamom for rich aroma and flavour.',
     image: '/images/product-cardamom.png',
+    href: '/products/cardamom',
   },
   {
     id: 'masala-chai',
     name: 'Masala Chai Extract',
     description: 'Perfect blend of Indian spices and strong chai flavour.',
     image: '/images/product-masala-chai.png',
+    href: '/products/masalachai',
   },
 ]
 
@@ -130,8 +137,7 @@ function ProductCard({ product }: { product: (typeof products)[number] }) {
         </h3>
         <p className="text-xs text-muted-foreground leading-relaxed">{product.description}</p>
         <a
-          href="https://wa.me/917619610605"
-          target="_blank"
+          href={product.href}
           rel="noopener noreferrer"
           className="flex items-center gap-2 border border-primary text-primary px-3 py-2 rounded text-xs font-semibold hover:bg-primary hover:text-primary-foreground transition-colors"
         >

@@ -6,13 +6,34 @@ import { useState } from 'react'
 import { ChevronDown, Menu, X, MessageCircle } from 'lucide-react'
 
 const products = [
-  'Black Lemon Tea Extract',
-  'Irani Chai Extract',
-  'Ginger Extract',
-  'Detox Extract',
-  'Kashmir Kahwa Extract',
-  'Cardamom Extract',
-  'Masala Chai Extract',
+  {
+    name: 'Black Lemon Tea Extract',
+    href: '/products/lemontea',
+  },
+  {
+    name: 'Irani Chai Extract',
+    href: '/products/iranichai',
+  },
+  {
+    name: 'Ginger Extract',
+    href: '/products/ginger',
+  },
+  {
+    name: 'Detox Extract',
+    href: '/products/detox',
+  },
+  {
+    name: 'Kashmir Kahwa Extract',
+    href: '/products/kashmirkahwa',
+  },
+  {
+    name: 'Cardamom Extract',
+    href: '/products/cardamom',
+  },
+  {
+    name: 'Masala Chai Extract',
+    href: '/products/masalachai',
+  },
 ]
 
 export default function Header() {
@@ -35,18 +56,6 @@ export default function Header() {
   return (
     <header className="bg-background border-b border-border sticky top-0 z-50 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
-        {/* Logo */}
-        {/* <Link href="/" className="flex items-center gap-2 shrink-0">
-          <div className="w-12 h-12 rounded-full border-2 border-primary flex items-center justify-center bg-primary">
-            <span className="text-primary-foreground font-bold text-lg leading-none" style={{ fontFamily: 'var(--font-playfair)' }}>LR</span>
-          </div>
-          <div>
-            <p className="text-primary font-bold text-base leading-tight" style={{ fontFamily: 'var(--font-playfair)' }}>
-              LEAF<span className="text-accent">n</span>ROOTS
-            </p>
-            <p className="text-muted-foreground text-[10px] leading-none tracking-wider">Drop of Wellness</p>
-          </div>
-        </Link> */}
         <Link href="/" className="flex items-center gap-2 shrink-0">
           <img
             src="/images/logo.png"
@@ -79,11 +88,11 @@ export default function Header() {
                   <div className="absolute top-full left-0 mt-1 bg-card border border-border rounded-md shadow-lg py-2 w-52 z-50">
                     {products.map((p) => (
                       <Link
-                        key={p}
-                        href="/products"
+                        key={p.href}
+                        href={p.href}
                         className="block px-4 py-2 text-sm text-foreground hover:bg-muted hover:text-primary transition-colors"
                       >
-                        {p}
+                        {p.name}
                       </Link>
                     ))}
                   </div>
