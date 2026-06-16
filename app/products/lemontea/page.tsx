@@ -355,7 +355,7 @@ const [selectedImage, setSelectedImage] = useState(
             <div>
               <div className="relative w-full h-full rounded-2xl overflow-hidden border shadow-lg">
                 <Image
-                  src="/images/packaging.png"
+                  src="/images/pack.png"
                   alt="Packaging"
                   fill
                   className="object-cover"
