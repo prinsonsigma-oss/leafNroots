@@ -26,6 +26,11 @@ export const metadata: Metadata = {
     'Premium natural wellness extracts made from India\'s finest spices, herbs and botanicals. 100% Natural, Lab Tested, Made in India.',
   keywords: 'herbal extract, wellness, natural ingredients, India, tea extract, ginger, cardamom',
   generator: 'v0.app',
+  icons: {
+    icon: '/images/lg.png',
+    shortcut: '/images/lg.png',
+    apple: '/images/lg.png',
+  },
 }
 
 export const viewport: Viewport = {
