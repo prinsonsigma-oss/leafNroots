@@ -158,7 +158,7 @@ const [selectedImage, setSelectedImage] = useState(
             {/* WhatsApp */}
             <div className="lg:mt-50 sm:mt2">
             <a
-              href="https://wa.me/917619610605"
+              href="https://wa.me/+917019965445"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-green-600 text-white px-6 py-4 rounded-lg flex items-center justify-center gap-2 font-semibold"
