@@ -351,7 +351,7 @@ const [selectedImage, setSelectedImage] = useState(
               </div>
             </div>
 
-            {/* Packaging */}
+            {/* Packaging new name*/}
             <div>
               <div className="relative w-full h-full rounded-2xl overflow-hidden border shadow-lg">
                 <Image
