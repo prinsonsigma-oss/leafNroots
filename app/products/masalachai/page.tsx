@@ -55,7 +55,7 @@ const [selectedImage, setSelectedImage] = useState(
                 alt="Irani Chai Extract"
                 width={700}
                 height={700}
-                className="w-full object-cover"
+                className="w-200 h-160 object-cover"
               />
             </div>
 
@@ -156,6 +156,7 @@ const [selectedImage, setSelectedImage] = useState(
             </div>
 
             {/* WhatsApp */}
+            <div className="lg:mt-50 sm:mt2">
             <a
               href="https://wa.me/917619610605"
               target="_blank"
@@ -165,103 +166,115 @@ const [selectedImage, setSelectedImage] = useState(
               <ShoppingBag size={18} />
               Order on WhatsApp
             </a>
+            </div>
 
           </div>
         </div>
 
         {/* Benefits */}
-        <section
-          className="mt-16 relative overflow-hidden rounded-2xl"
-          style={{
-            backgroundImage: "url('/images/teaimage.png')",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
+    <div className="mt-16 grid lg:grid-cols-3 gap-8">
+
+  {/* Benefits */}
+  <section className="lg:col-span-2 bg-white rounded-2xl border shadow-sm overflow-hidden">
+    <div className="grid lg:grid-cols-[1fr_320px] gap-8 p-8 lg:p-10">
+
+      {/* Left Content */}
+      <div>
+        <h2
+          className="text-3xl font-bold mb-8 text-foreground"
+          style={{ fontFamily: "var(--font-playfair)" }}
         >
-          {/* Dark Overlay */}
-          <div className="absolute inset-0 bg-black/40"></div>
+          Benefits
+        </h2>
 
-          <div className="relative z-10 p-10">
-            <h2
-              className="text-3xl font-bold text-white mb-8"
-              style={{ fontFamily: "var(--font-playfair)" }}
-            >
-              Benefits
-            </h2>
+        <div className="space-y-5">
+          <BenefitCard
+            title="Supports Digestion"
+            desc="Lemon and spices help improve digestion and reduce bloating."
+          />
 
-            <div className="grid md:grid-cols-2 gap-6 text-white text-2xl">
-              <BenefitCard
-                title="Supports Digestion"
-                desc="Lemon and spices help improve digestion and reduce bloating."
-              />
+          <BenefitCard
+            title="Boosts Immunity"
+            desc="Rich in antioxidants and Vitamin C to strengthen immunity."
+          />
 
-              <BenefitCard
-                title="Boosts Immunity"
-                desc="Rich in antioxidants and Vitamin C to strengthen immunity."
-              />
+          <BenefitCard
+            title="Natural Detox"
+            desc="Helps flush toxins and supports overall wellness."
+          />
 
-              <BenefitCard
-                title="Natural Detox"
-                desc="Helps flush toxins and supports overall wellness."
-              />
+          <BenefitCard
+            title="Refreshing & Energizing"
+            desc="Perfect beverage to refresh and rejuvenate naturally."
+          />
+        </div>
+      </div>
 
-              <BenefitCard
-                title="Refreshing & Energizing"
-                desc="Perfect beverage to refresh and rejuvenate naturally."
-              />
-            </div>
+      {/* Right Image */}
+      <div className="flex items-center justify-center">
+        <div className="relative w-74 h-74 lg:w-72 lg:h-72 rounded-full overflow-hidden shadow-xl border-4 border-primary/10">
+          <Image
+            src="/images/m1.png"
+            alt="Benefits"
+            fill
+            className="object-cover"
+          />
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  {/* Ingredients */}
+  <section className="border rounded-2xl p-6 bg-background">
+    <h2
+      className="text-3xl font-bold mb-8"
+      style={{ fontFamily: "var(--font-playfair)" }}
+    >
+      Ingredients
+    </h2>
+
+    <div className="space-y-5">
+      {[
+        {
+          name: "Ginger",
+          image: "/images/ginger.png",
+        },
+        {
+          name: "Clove",
+          image: "/images/clove.png",
+        },
+        {
+          name: "Cardamom",
+          image: "/images/cardomom.png",
+        },
+        {
+          name: "Cinnamon",
+          image: "/images/cinnamon.png",
+        },
+      ].map((item) => (
+        <div
+          key={item.name}
+          className="flex items-center gap-4 border rounded-xl p-3 hover:shadow-md transition"
+        >
+          <div className="relative w-16 h-16 rounded-full overflow-hidden shrink-0">
+            <Image
+              src={item.image}
+              alt={item.name}
+              fill
+              className="object-cover"
+            />
           </div>
-        </section>
 
-        {/* Ingredients */}
-        <section className="mt-16">
-          <h2
-            className="text-3xl font-bold mb-8"
-            style={{ fontFamily: "var(--font-playfair)" }}
-          >
-            Ingredients
-          </h2>
+          <h3 className="font-semibold">
+            {item.name}
+          </h3>
+        </div>
+      ))}
+    </div>
+  </section>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6">
-            {[
-              {
-                name: "Ginger",
-                image: "/images/ginger.png",
-              },
-              {
-                name: "Clove",
-                image: "/images/clove.png",
-              },
-              {
-                name: "Cardamom",
-                image: "/images/cardomom.png",
-              },
-              {
-                name: "Cinnamon",
-                image: "/images/cinnamon.png",
-              },
-              
-            ].map((item) => (
-              <div
-                key={item.name}
-                className="border rounded-xl p-5 text-center hover:shadow-lg transition-all"
-              >
-                <div className="relative w-28 h-28 mx-auto mb-4 rounded-full overflow-hidden border-4 border-primary/20">
-                  <Image
-                    src={item.image}
-                    alt={item.name}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-
-                <h3 className="font-semibold text-lg">
-                  {item.name}
-                </h3>
-              </div>
-            ))}
-          </div>
-        </section>
+</div>
 
         {/* How To Use */}
         <section className="mt-16">
@@ -371,34 +384,33 @@ const [selectedImage, setSelectedImage] = useState(
         </section>
 
         {/* Reviews */}
-        <section className="mt-16 mb-10">
+                <section className="mt-16 mb-10">
           <h2
             className="text-3xl font-bold mb-8"
             style={{ fontFamily: "var(--font-playfair)" }}
           >
             Customer Reviews
           </h2>
-
-          <div className="grid lg:grid-cols-2 gap-10">
-
+        
+          <div className="grid lg:grid-cols-2 gap-10 items-stretch">
+        
             {/* Left Side - Rating Summary */}
-            <div className="border rounded-2xl p-8 shadow-sm">
-              <div className="flex text-yellow-500 mb-3">
+            <div className="border rounded-2xl p-3 shadow-sm h-full flex flex-col">
+              <div className="flex text-yellow-500 mb-1">
                 {[1, 2, 3, 4, 5].map((star) => (
                   <Star key={star} size={24} fill="currentColor" />
                 ))}
               </div>
-
+        
               <h3 className="text-4xl font-bold mb-2">
                 4.8
               </h3>
-
+        
               <p className="text-muted-foreground mb-6">
                 Based on 128 reviews
               </p>
-
-              <div className="space-y-3">
-
+        
+              <div className="space-y-3 mt-auto">
                 {[
                   { star: 5, count: 102, width: "85%" },
                   { star: 4, count: 20, width: "20%" },
@@ -413,20 +425,20 @@ const [selectedImage, setSelectedImage] = useState(
                     <span className="w-6 text-sm font-medium">
                       {item.star}
                     </span>
-
+        
                     <Star
                       size={14}
                       fill="currentColor"
                       className="text-yellow-500"
                     />
-
+        
                     <div className="flex-1 h-3 bg-muted rounded-full overflow-hidden">
                       <div
                         className="h-full bg-green-700 rounded-full"
                         style={{ width: item.width }}
                       />
                     </div>
-
+        
                     <span className="text-sm w-8 text-right">
                       {item.count}
                     </span>
@@ -434,70 +446,90 @@ const [selectedImage, setSelectedImage] = useState(
                 ))}
               </div>
             </div>
-
+        
             {/* Right Side - Reviews */}
-            <div className="relative">
-
-  {/* Arrows */}
-  <div className="flex justify-end gap-2 mb-4">
-    <button
-      onClick={scrollLeft}
-      className="w-10 h-10 rounded-full border flex items-center justify-center hover:bg-muted transition"
-    >
-      <ChevronLeft size={18} />
-    </button>
-
-    <button
-      onClick={scrollRight}
-      className="w-10 h-10 rounded-full border flex items-center justify-center hover:bg-muted transition"
-    >
-      <ChevronRight size={18} />
-    </button>
-  </div>
-
-  {/* Reviews Slider */}
-  <div
-    ref={reviewsRef}
-    className="flex gap-4 overflow-x-auto scroll-smooth scrollbar-hide"
-  >
-    <div className="min-w-[300px]">
-      <ReviewCard
-        name="Ramesh"
-        review="Amazing taste and very refreshing."
-      />
-    </div>
-
-    <div className="min-w-[300px]">
-      <ReviewCard
-        name="Sneha"
-        review="Perfect balance of tea and lemon."
-      />
-    </div>
-
-    <div className="min-w-[300px]">
-      <ReviewCard
-        name="Amit"
-        review="Easy to use and tastes great."
-      />
-    </div>
-
-    <div className="min-w-[300px]">
-      <ReviewCard
-        name="Priya"
-        review="Loved the aroma and freshness. Will definitely order again."
-      />
-    </div>
-
-    <div className="min-w-[300px]">
-      <ReviewCard
-        name="Karthik"
-        review="Excellent quality and very easy to prepare."
-      />
-    </div>
-
-  </div>
-</div>
-
+            <div className="border rounded-2xl p-3 shadow-sm h-full flex flex-col">
+        
+              {/* Arrows */}
+              <div className="flex justify-end gap-2 mb-6">
+                <button
+                  onClick={scrollLeft}
+                  className="w-10 h-10 rounded-full border flex items-center justify-center hover:bg-muted transition"
+                >
+                  <ChevronLeft size={18} />
+                </button>
+        
+                <button
+                  onClick={scrollRight}
+                  className="w-10 h-10 rounded-full border flex items-center justify-center hover:bg-muted transition"
+                >
+                  <ChevronRight size={18} />
+                </button>
+              </div>
+        
+              {/* Reviews Slider */}
+              <div
+                ref={reviewsRef}
+                className="flex gap-4 overflow-x-auto scroll-smooth scrollbar-hide flex-1 border-none"
+              >
+                <div className="min-w-[300px]">
+                  <ReviewCard
+                    name="~ Ramesh"
+                    review="Amazing taste and very refreshing.
+                    Perfect balance of tea and lemon.
+                    Easy to use and tastes great.
+                    Must give a try.
+                    Loved the aroma and freshness. Will definitely order again."
+                  />
+                </div>
+        
+                <div className="min-w-[300px]">
+                  <ReviewCard
+                    name="~ Sneha"
+                    review="Amazing taste and very refreshing.
+                    Perfect balance of tea and lemon.
+                    Easy to use and tastes great.
+                    Must give a try.
+                    Loved the aroma and freshness. Will definitely order again."
+                  />
+                </div>
+        
+                <div className="min-w-[300px]">
+                  <ReviewCard
+                    name="~ Amit"
+                    review="Amazing taste and very refreshing.
+                    Perfect balance of tea and lemon.
+                    Easy to use and tastes great.
+                    Must give a try.
+                    Loved the aroma and freshness. Will definitely order again."
+                  />
+                </div>
+        
+                <div className="min-w-[300px]">
+                  <ReviewCard
+                    name="~ Priya"
+                    review="Amazing taste and very refreshing.
+                    Perfect balance of tea and lemon.
+                    Easy to use and tastes great.
+                    Must give a try.
+                    Loved the aroma and freshness. Will definitely order again."
+                  />
+                </div>
+        
+                <div className="min-w-[300px]">
+                  <ReviewCard
+                    name="~ Karthik"
+                    review="Amazing taste and very refreshing.
+                    Perfect balance of tea and lemon.
+                    Easy to use and tastes great.
+                    Must give a try.
+                    Loved the aroma and freshness. Will definitely order again."
+                  />
+                </div>
+              </div>
+        
+            </div>
+        
           </div>
         </section>
 
@@ -525,7 +557,7 @@ function BenefitCard({
   desc: string;
 }) {
   return (
-    <div className="bg-black/30 backdrop-blur-sm rounded-xl p-5">
+    <div className="rounded-xl">
       <div className="flex items-start gap-3">
         <CheckCircle2
           size={20}
@@ -533,11 +565,11 @@ function BenefitCard({
         />
 
         <div>
-          <h3 className="font-semibold text-white mb-2">
+          <h3 className="font-semibold text-black mb-2">
             {title}
           </h3>
 
-          <p className="text-sm text-white">
+          <p className="text-sm text-black">
             {desc}
           </p>
         </div>

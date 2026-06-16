@@ -8,6 +8,7 @@ import HomeFeaturedProducts from '@/components/home/HomeFeaturedProducts'
 import OurStory from '@/components/about/OurStory'
 import MissionVision from '@/components/about/MissionVision'
 import WhyChoose from '@/components/about/WhyChoose'
+import TestimonialsCarousel from '@/components/home/testimonial'
 
 export const metadata: Metadata = {
   title: 'Leaf n Roots — Drop of Wellness',
@@ -25,8 +26,13 @@ export default function HomePage() {
         <FeaturesGrid />
         <HomeFeaturedProducts />
         <OurStory />
-        <MissionVision />
-        <WhyChoose />
+        <section className="py-14">
+      <div className="max-w-7xl mx-auto px-4">
+        <TestimonialsCarousel />
+      </div>
+    </section>
+        {/* <MissionVision />
+        <WhyChoose /> */}
       </main>
       <Footer />
     </div>

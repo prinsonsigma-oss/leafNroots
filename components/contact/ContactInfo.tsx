@@ -29,11 +29,11 @@ const info = [
     content: 'www.leafnroot.in',
     href: 'https://www.leafnroot.in',
   },
-  // {
-  //   icon: Clock,
-  //   title: 'Business Hours',
-  //   content: 'Monday - Saturday: 9:30 AM - 6:30 PM\nSunday: Closed',
-  // },
+  {
+    icon: Clock,
+    title: 'Business Hours',
+    content: 'Monday - Saturday: 9:30 AM - 6:30 PM\nSunday: Closed',
+  },
 
 ]
 
@@ -55,9 +55,9 @@ export default function ContactInfo() {
         </p>
       </div>
 
-      <ul className="space-y-5">
+      <ul className="space-y-5 mt-15">
         {info.map(({ icon: Icon, title, content, href }) => (
-          <li key={title} className="flex gap-3">
+          <li key={title} className="flex gap-8">
             <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary shrink-0 mt-0.5">
               <Icon size={17} />
             </div>

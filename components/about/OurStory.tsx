@@ -1,5 +1,7 @@
 import Image from 'next/image'
 import { Leaf, Sprout, Flame, Sparkles, Sun } from 'lucide-react'
+import { ArrowRight } from "lucide-react";
+import Link from 'next/link';
 
 const sources = [
   { label: 'Malenadu\nCardamom', icon: Sprout },
@@ -10,58 +12,72 @@ const sources = [
 
 export default function OurStory() {
   return (
-    <section className="py-16 bg-background">
-      <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-        {/* Left: Image with overlay */}
-        <div className="relative rounded-xl overflow-hidden shadow-xl aspect-[4/3]">
-          <Image
-            src="/images/plantation.png"
-            alt="India's finest growing regions — lush green tea plantation"
-            fill
-            className="object-cover"
-          />
-          {/* Overlay */}
-          
+    <section className="relative min-h-[650px] md:min-h-[750px] lg:min-h-[850px] overflow-hidden">
+  {/* Background Image */}
+  <Image
+    src="/images/plantation.png"
+    alt="India's finest growing regions — lush green tea plantation"
+    fill
+    priority
+    className="object-cover"
+  />
+
+  {/* Overlay */}
+  <div className="absolute inset-0 " />
+
+  {/* Content */}
+  <div className="absolute inset-0 flex items-center">
+    <div className="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8">
+      <div className="max-w-xl lg:max-w-2xl text-white">
+
+        {/* Label */}
+        <div className="flex items-center gap-2 mb-4">
+          <Leaf size={16} className="text-yellow-950" />
+          <p className="text-yellow-950 text-l font-bold tracking-widest uppercase">
+            Our Story
+          </p>
         </div>
 
-        {/* Right: Story Text */}
-        <div className="space-y-6">
-          <div>
-            <div className="flex items-center gap-2 mb-2">
-              <Leaf size={16} className="text-primary" />
-              <p className="text-primary text-sm font-bold tracking-widest uppercase">Our Story</p>
-            </div>
-            <h2 className="text-3xl lg:text-4xl font-bold text-foreground text-balance" style={{ fontFamily: 'var(--font-playfair)' }}>
-              Every Drop Begins at the Source
-            </h2>
-          </div>
-          <div className="space-y-4 text-muted-foreground leading-relaxed">
-            <p>
-              Our journey began with a simple belief – nature has everything we need to live well.
-            </p>
-            <p>
-              We travelled across India to handpick the finest herbs, spices and botanicals known for
-              their aroma, taste and wellness benefits.
-            </p>
-            <p>
-              Using advanced extraction techniques, we capture the authentic goodness of each ingredient
-              — delivering a premium tea and wellness experience in every drop.
-            </p>
-          </div>
+        {/* Heading */}
+        <h2
+          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6"
+          style={{ fontFamily: "var(--font-playfair)" }}
+        >
+         <span className="text-yellow-300"> Every Drop Begins
+          <br />
+          at the Source</span>
+        </h2>
 
-          {/* Source icons */}
-          <div className="grid grid-cols-4 gap-4 pt-4">
-            {sources.map(({ label, icon: Icon }) => (
-              <div key={label} className="flex flex-col items-center text-center gap-2">
-                <div className="w-14 h-14 rounded-full bg-muted flex items-center justify-center text-primary">
-                  <Icon size={22} strokeWidth={1.5} />
-                </div>
-                <p className="text-xs font-semibold text-foreground whitespace-pre-line leading-tight">{label}</p>
-              </div>
-            ))}
-          </div>
+        {/* Description */}
+        <div className="space-y-4 text-sm sm:text-base lg:text-lg text-black leading-relaxed">
+          <p>
+            At Leaf n Roots,we believe exceptional wellness start with exceptional Ingredients.
+          </p>
+
+          <p>
+            From the cardamom hills of Malenadu and the spice plantations of Kerala to the saffron fields of Kashmir,we carefully source 
+            nature's finest treasures and transform them into convenient drops of wellness.
+          </p>
+
+          <p>
+            Adrop of nature.A worldof wellness. 
+          </p>
         </div>
+
+        {/* Source Icons */}
+        <div className="pt-8">
+  <Link
+    href="/contact"
+    className="inline-flex items-center gap-2 bg-primary text-white px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition"
+  >
+    Know More About Us
+    <ArrowRight size={18} />
+  </Link>
+</div>
+
       </div>
-    </section>
+    </div>
+  </div>
+</section>
   )
 }

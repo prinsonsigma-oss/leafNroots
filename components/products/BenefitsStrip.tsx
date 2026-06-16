@@ -10,51 +10,72 @@ const benefits = [
 
 export default function BenefitsStrip() {
   return (
-    <section className="bg-card border-y border-border">
-      <div className="max-w-7xl mx-auto px-4 py-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-          {/* Left: CTA */}
-          <div className="flex flex-col sm:flex-row items-center gap-6">
-            <div className="relative w-28 h-28 rounded-full overflow-hidden shrink-0 shadow-lg">
+    <section className="bg-yellow-100 border-y border-border">
+      <div className="max-w-7xl mx-auto px-4 py-8">
+        <div className="flex flex-wrap lg:flex-nowrap items-center justify-between gap-8">
+
+          {/* Left Side */}
+          <div className="relative max-w-md">
+
+            {/* Decorative Image Overlay */}
+            <div className="absolute -left-8 -top-6 w-50 h-50 opacity-90 pointer-events-none">
               <Image
-                src="/images/mission-tea.png"
-                alt="A drop of wellness for a better you"
+                src="/images/m1.png"
+                alt=""
                 fill
-                className="object-cover"
+                className="object-contain"
+                aria-hidden="true"
               />
             </div>
-            <div className="text-center sm:text-left space-y-3">
+
+            <div className="relative z-10 pl-36 lg:pl-60">
               <h3
-                className="text-xl font-bold text-foreground"
-                style={{ fontFamily: 'var(--font-playfair)' }}
+                className="relative z-10 text-xl lg:text-2xl font-bold text-foreground leading-tight"
+                style={{ fontFamily: "var(--font-playfair)" }}
               >
-                A Drop of Wellness<br />For a Better You
+                A Drop of Wellness
+                <br />
+                <span className="text-primary">
+                  For a Better You
+                </span>
               </h3>
+
               <a
                 href="https://wa.me/917619610605"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-5 py-2.5 rounded text-sm font-semibold hover:bg-primary/90 transition-colors"
+                className="relative z-10 inline-flex items-center gap-2 bg-primary text-primary-foreground px-5 py-2 rounded mt-4 text-sm font-semibold hover:bg-primary/90 transition-colors"
               >
                 <MessageCircle size={16} />
                 Order on WhatsApp
               </a>
+
             </div>
           </div>
 
-          {/* Right: Benefits */}
-          <div className="grid grid-cols-4 gap-4">
-            {benefits.map(({ icon: Icon, label }) => (
-              <div key={label} className="flex flex-col items-center text-center gap-2">
-                <div className="w-12 h-12 rounded-full bg-muted flex items-center justify-center text-primary">
-                  <Icon size={22} strokeWidth={1.5} />
+          {/* Right Side Benefits */}
+          <div className="flex flex-wrap lg:flex-nowrap items-stretch justify-between gap-4 lg:gap-0">
+
+            {benefits.map(({ icon: Icon, label }, index) => (
+              <div
+                key={label}
+                className={`flex flex-col items-center text-center px-8 lg:px-10 py-2 flex-1 ${index !== benefits.length - 1
+                  ? "lg:border-r border-border"
+                  : ""
+                  }`}
+              >
+                <div className="w-12 h-12 rounded-full bg-muted flex items-center justify-center text-primary mb-3">
+                  <Icon size={24} strokeWidth={2} />
                 </div>
-                <p className="text-xs font-semibold text-foreground whitespace-pre-line leading-tight">
+
+                <span className="text-l md:text-sm font-medium text-foreground leading-tight whitespace-pre-line">
                   {label}
-                </p>
+                </span>
               </div>
             ))}
+
           </div>
+
         </div>
       </div>
     </section>

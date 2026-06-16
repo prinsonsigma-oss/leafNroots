@@ -4,7 +4,7 @@ import { ArrowRight, Leaf } from 'lucide-react'
 import { products } from '@/components/products/ProductGrid'
 
 export default function HomeFeaturedProducts() {
-  const featured = products.slice(0, 4)
+  const featured = products.slice(0, 7)
 
   return (
     <section className="py-16 bg-muted/40">
@@ -19,39 +19,50 @@ export default function HomeFeaturedProducts() {
               Our Signature Extracts
             </h2>
           </div>
-          <Link
+          {/* <Link
             href="/products"
             className="hidden sm:flex items-center gap-1.5 text-sm font-semibold text-primary hover:underline"
           >
             View All
             <ArrowRight size={14} />
-          </Link>
+          </Link> */}
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-7 gap-5">
           {featured.map((product) => (
             <div
-              key={product.id}
-              className="bg-card border border-border rounded-xl overflow-hidden shadow-sm hover:shadow-md hover:border-primary/30 transition-all group"
-            >
-              <div className="relative aspect-[3/4] overflow-hidden bg-muted">
-                <Image
-                  src={product.image}
-                  alt={product.name}
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-              </div>
-              <div className="p-4 space-y-2">
-                <h3
-                  className="font-bold text-foreground text-sm leading-tight"
-                  style={{ fontFamily: 'var(--font-playfair)' }}
-                >
-                  {product.name}
-                </h3>
-                <p className="text-xs text-muted-foreground leading-relaxed">{product.description}</p>
-              </div>
-            </div>
+  key={product.id}
+  className="bg-card border border-border rounded-xl overflow-hidden shadow-sm hover:shadow-md hover:border-primary/30 transition-all group flex flex-col h-full"
+>
+  <div className="relative aspect-[3/4] overflow-hidden bg-muted">
+    <Image
+      src={product.image}
+      alt={product.name}
+      fill
+      className="object-cover group-hover:scale-105 transition-transform duration-500"
+    />
+  </div>
+
+  <div className="p-4 flex flex-col flex-1">
+    <h3
+      className="font-bold text-foreground text-sm leading-tight"
+      style={{ fontFamily: 'var(--font-playfair)' }}
+    >
+      {product.name}
+    </h3>
+
+    <p className="text-xs text-muted-foreground leading-relaxed mt-2 flex-1">
+      {product.description}
+    </p>
+
+    <Link
+      href={product.href}
+      className="mt-4 inline-block w-full text-center bg-primary text-white text-sm font-medium py-2 rounded-md hover:opacity-90 transition"
+    >
+      View Details
+    </Link>
+  </div>
+</div>
           ))}
         </div>
 

@@ -24,7 +24,7 @@ export default function ContactPage() {
           <div className="max-w-7xl mx-auto px-4">
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
               {/* Contact Info */}
-              <div className="lg:col-span-1">
+              <div className="lg:col-span-1 mt-8">
                 <ContactInfo />
               </div>
 
