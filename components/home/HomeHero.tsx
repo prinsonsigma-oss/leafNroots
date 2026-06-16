@@ -7,11 +7,11 @@ export default function HomeHero() {
    <section className="relative min-h-[600px] md:min-h-[700px] lg:min-h-[800px] overflow-hidden">
   {/* Background Image */}
   <Image
-    src="/images/hero-spices.png"
+    src="/images/contact.png"
     alt="Wellness Extracts"
     fill
     priority
-    className="object-cover"
+    className="object-cover opacity-75"
   />
 
   {/* Overlay */}
@@ -33,21 +33,21 @@ export default function HomeHero() {
           className="font-bold leading-tight"
           style={{ fontFamily: "var(--font-playfair)" }}
         >
-          <span className="block text-black text-4xl sm:text-5xl lg:text-7xl">
+          <span className="block text-orange-600 text-4xl sm:text-5xl lg:text-7xl">
             Nature's
           </span>
 
-          <span className="block text-black text-4xl sm:text-5xl lg:text-7xl">
+          <span className="block text-primary text-4xl sm:text-5xl lg:text-7xl">
             Goodness
           </span>
 
-          <span className="block italic text-yellow-300 text-3xl sm:text-4xl lg:text-6xl mt-2">
+          <span className="block italic text-primary text-3xl sm:text-4xl lg:text-6xl mt-2">
             in Every Drop.
           </span>
         </h1>
 
         {/* Description */}
-        <p className="text-sm sm:text-base lg:text-lg text-yellow-900 max-w-md lg:max-w-lg leading-relaxed">
+        <p className="text-sm sm:text-base lg:text-xl text-yellow-300 max-w-md lg:max-w-lg leading-relaxed">
           Premium wellness extracts made from India's finest spices,
           herbs and botanicals.
         </p>
