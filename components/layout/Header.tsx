@@ -116,7 +116,7 @@ export default function Header() {
         {/* CTA */}
         <div className="flex items-center gap-3">
           <a
-            href="https://wa.me/917619610605"
+            href="https://wa.me/+917019965445"
             target="_blank"
             rel="noopener noreferrer"
             className="hidden sm:flex items-center gap-2 bg-primary text-primary-foreground px-4 py-2 rounded text-sm font-semibold hover:bg-primary/90 transition-colors"

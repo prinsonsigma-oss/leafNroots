@@ -14,8 +14,8 @@ const info = [
   {
     icon: Phone,
     title: 'Call Us',
-    content: '+91 76196 10605',
-    href: 'tel:+917619610605',
+    content: '+91 70199 65445',
+    href: 'tel:+917019965445',
   },
   {
     icon: Mail,

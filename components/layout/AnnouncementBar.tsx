@@ -38,11 +38,11 @@ export default function AnnouncementBar() {
             <span>info@leafnroot.in</span>
           </a>
           <a
-            href="tel:+917619610605"
+            href="tel:+917019965445"
             className="flex items-center gap-1.5 opacity-90 hover:opacity-100 transition-opacity"
           >
             <Phone size={12} />
-            <span>+91 76196 10605</span>
+            <span>+91 70199 65445</span>
           </a>
           <div className="flex items-center gap-2">
             <a href="https://facebook.com/leafnroots.natural" aria-label="Facebook" className="opacity-80 hover:opacity-100 transition-opacity">

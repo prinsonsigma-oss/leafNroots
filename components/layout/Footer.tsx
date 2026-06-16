@@ -48,7 +48,7 @@ export default function Footer() {
               {"Nature's goodness in every drop. Premium wellness extracts crafted for a better you."}
             </p>
             <div className="flex items-center gap-3">
-              <a href="https://wa.me/917619610605"
+              <a href="https://wa.me/+917019965445"
                 target="_blank"
                 rel="noopener noreferrer" aria-label="WhatsApp" className="opacity-70 hover:opacity-100 hover:text-accent transition-all">
                 <WhatsAppIcon size={18} />
@@ -100,9 +100,9 @@ export default function Footer() {
                   <span>L&R Naturals, Willys Centre, Collectors Gate, Balmatta, Mangaluru – 575002, Karnataka, India.</span>
                 </li>
                 <li>
-                  <a href="tel:+917619610605" className="flex gap-2.5 text-sm opacity-80 hover:opacity-100 hover:text-accent transition-all">
+                  <a href="tel:+917019965445" className="flex gap-2.5 text-sm opacity-80 hover:opacity-100 hover:text-accent transition-all">
                     <Phone size={15} className="shrink-0 text-accent" />
-                    +91 76196 10605
+                    +91 70199 65445
                   </a>
                 </li>
                 <li>
@@ -124,7 +124,7 @@ export default function Footer() {
               <p className="text-sm font-semibold text-accent mb-1">ORDER ON WHATSAPP</p>
               <p className="text-xs opacity-70 mb-3">Have questions or want to place your order? Chat with us on WhatsApp.</p>
               <a
-                href="https://wa.me/917619610605"
+                href="https://wa.me/+917019965445"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-primary text-white px-4 py-2 rounded text-sm font-semibold hover:bg-primary/80 transition-colors"
