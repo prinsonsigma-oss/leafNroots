@@ -317,7 +317,7 @@ const [selectedImage, setSelectedImage] = useState(
                         Step 1
                       </h3>
                       <p className="text-white/90">
-                        Add 10–15 drops into hot or cold water.
+                        Add 1–2 drops to 150 ml of water (hot or cold) or tea.
                       </p>
                     </div>
                   </div>

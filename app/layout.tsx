@@ -1,7 +1,14 @@
 import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
-import { Lato, Playfair_Display, Geist_Mono } from 'next/font/google'
+import { Poppins, Lato, Playfair_Display, Geist_Mono } from 'next/font/google'
 import './globals.css'
+
+
+const poppins = Poppins({
+  weight: ['300', '400', '500', '600', '700'],
+  subsets: ['latin'],
+  variable: '--font-poppins',
+})
 
 const lato = Lato({
   weight: ['300', '400', '700', '900'],
@@ -47,7 +54,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${lato.variable} ${playfair.variable} ${geistMono.variable} bg-background`}
+      className={`${poppins.variable} ${poppins.variable} ${poppins.variable} bg-background`}
     >
       <body className="font-sans antialiased">
         {children}
