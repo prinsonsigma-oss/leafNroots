@@ -10,6 +10,7 @@ export default function ProductDetails() {
   const productImages = [
   "/images/product-detox.png",
   "/images/detoxchai.png",
+  "/images/cup.jpeg",
 ];
   const reviewsRef = useRef<HTMLDivElement>(null);
 

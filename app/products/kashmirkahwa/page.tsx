@@ -10,6 +10,7 @@ export default function ProductDetails() {
   const productImages = [
   "/images/product-kashmir-kahwa.png",
   "/images/kahwa.png",
+  "/images/cup.jpeg",
 ];
   const reviewsRef = useRef<HTMLDivElement>(null);
 

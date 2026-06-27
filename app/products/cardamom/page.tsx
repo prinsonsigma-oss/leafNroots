@@ -10,6 +10,7 @@ export default function ProductDetails() {
   const productImages = [
   "/images/product-cardamom.png",
   "/images/card.png",
+  "/images/cup.jpeg",
 ];
   const reviewsRef = useRef<HTMLDivElement>(null);
 

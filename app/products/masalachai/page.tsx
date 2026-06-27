@@ -10,6 +10,7 @@ export default function ProductDetails() {
   const productImages = [
   "/images/product-masala-chai.png",
   "/images/masala.png",
+  "/images/cup.jpeg",
 ];
   const reviewsRef = useRef<HTMLDivElement>(null);
 
