@@ -31,7 +31,7 @@ export default function ContactForm() {
     const text = encodeURIComponent(
       `Hello Leaf n Roots!\n\nName: ${form.name}\nPhone: +91${form.phone}\nEmail: ${form.email}\nSubject: ${form.subject}\n\nMessage: ${form.message}`
     )
-    window.open(`https://wa.me/917619610605?text=${text}`, '_blank')
+    window.open(`https://wa.me/+917019965445?text=${text}`, '_blank')
   }
 
   const inputClass =
@@ -107,7 +107,7 @@ export default function ContactForm() {
           <label htmlFor="subject" className="block text-xs font-semibold text-foreground mb-1">
             Subject
           </label>
-          <select
+          {/* <select
             id="subject"
             name="subject"
             value={form.subject}
@@ -120,10 +120,31 @@ export default function ContactForm() {
                 {s}
               </option>
             ))}
-          </select>
+          </select> */}
+          <div>
+            <label className="block text-xs font-semibold text-foreground mb-2">
+              How can we help?
+            </label>
+
+            <div className="flex flex-wrap gap-2">
+              {subjects.map((s) => (
+                <button
+                  key={s}
+                  type="button"
+                  onClick={() => setForm({ ...form, subject: s })}
+                  className={`px-4 py-4 rounded-full text-sm font-medium transition ${form.subject === s
+                      ? "bg-primary text-primary-foreground"
+                      : "bg-muted text-foreground hover:bg-primary/10"
+                    }`}
+                >
+                  {s}
+                </button>
+              ))}
+            </div>
+          </div>
         </div>
 
-        <div>
+        {/* <div>
           <label htmlFor="message" className="block text-xs font-semibold text-foreground mb-1">
             Message <span className="text-destructive">*</span>
           </label>
@@ -137,7 +158,7 @@ export default function ContactForm() {
             placeholder="Type your message here..."
             className={`${inputClass} resize-none`}
           />
-        </div>
+        </div> */}
 
         <button
           type="submit"

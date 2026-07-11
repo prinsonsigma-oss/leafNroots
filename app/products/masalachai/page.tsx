@@ -215,7 +215,7 @@ const [selectedImage, setSelectedImage] = useState(
       <div className="flex items-center justify-center">
         <div className="relative w-74 h-74 lg:w-72 lg:h-72 rounded-full overflow-hidden shadow-xl border-4 border-primary/10">
           <Image
-            src="/images/m1.png"
+            src="/images/m22.jpeg"
             alt="Benefits"
             fill
             className="object-cover"
@@ -473,51 +473,30 @@ const [selectedImage, setSelectedImage] = useState(
                 ref={reviewsRef}
                 className="flex gap-4 overflow-x-auto scroll-smooth scrollbar-hide flex-1 border-none"
               >
+                
+        
                 <div className="min-w-[300px]">
                   <ReviewCard
-                    name="~ Ramesh"
-                    review="Amazing taste and very refreshing.
-                    Perfect balance of tea and lemon.
-                    Easy to use and tastes great.
-                    Must give a try.
-                    Loved the aroma and freshness. Will definitely order again."
+                    name="~ Imran Khan"
+                    review="Strong and authentic masala chai flavour. Highly recommended."
                   />
                 </div>
         
                 <div className="min-w-[300px]">
                   <ReviewCard
-                    name="~ Sneha"
-                    review="Amazing taste and very refreshing.
-                    Perfect balance of tea and lemon.
-                    Easy to use and tastes great.
-                    Must give a try.
-                    Loved the aroma and freshness. Will definitely order again."
+                    name="~ Shruthi Hegde"
+                    review="Perfect blend of spices and very convenient to use."
                   />
                 </div>
         
                 <div className="min-w-[300px]">
                   <ReviewCard
-                    name="~ Amit"
-                    review="Amazing taste and very refreshing.
-                    Perfect balance of tea and lemon.
-                    Easy to use and tastes great.
-                    Must give a try.
-                    Loved the aroma and freshness. Will definitely order again."
+                    name="~ Roshan Lobo"
+                    review="Tastes just like homemade masala chai. Excellent product."
                   />
                 </div>
         
-                <div className="min-w-[300px]">
-                  <ReviewCard
-                    name="~ Priya"
-                    review="Amazing taste and very refreshing.
-                    Perfect balance of tea and lemon.
-                    Easy to use and tastes great.
-                    Must give a try.
-                    Loved the aroma and freshness. Will definitely order again."
-                  />
-                </div>
-        
-                <div className="min-w-[300px]">
+                {/* <div className="min-w-[300px]">
                   <ReviewCard
                     name="~ Karthik"
                     review="Amazing taste and very refreshing.
@@ -526,7 +505,7 @@ const [selectedImage, setSelectedImage] = useState(
                     Must give a try.
                     Loved the aroma and freshness. Will definitely order again."
                   />
-                </div>
+                </div> */}
               </div>
         
             </div>

@@ -467,60 +467,30 @@ const [selectedImage, setSelectedImage] = useState(
                 ref={reviewsRef}
                 className="flex gap-4 overflow-x-auto scroll-smooth scrollbar-hide flex-1 border-none"
               >
+                
+        
                 <div className="min-w-[300px]">
                   <ReviewCard
-                    name="~ Ramesh"
-                    review="Amazing taste and very refreshing.
-                    Perfect balance of tea and lemon.
-                    Easy to use and tastes great.
-                    Must give a try.
-                    Loved the aroma and freshness. Will definitely order again."
+                    name="~ Mohammed Asif K"
+                    review="Reminded me of traditional café-style Irani chai. Excellent product."
                   />
                 </div>
         
                 <div className="min-w-[300px]">
                   <ReviewCard
-                    name="~ Sneha"
-                    review="Amazing taste and very refreshing.
-                    Perfect balance of tea and lemon.
-                    Easy to use and tastes great.
-                    Must give a try.
-                    Loved the aroma and freshness. Will definitely order again."
+                    name="~ Suresh Acharya"
+                    review="Rich taste and very easy to prepare. Perfect for tea lovers."
                   />
                 </div>
         
                 <div className="min-w-[300px]">
                   <ReviewCard
-                    name="~ Amit"
-                    review="Amazing taste and very refreshing.
-                    Perfect balance of tea and lemon.
-                    Easy to use and tastes great.
-                    Must give a try.
-                    Loved the aroma and freshness. Will definitely order again."
+                    name="~ Joanna Fernandes"
+                    review="Wonderful aroma and premium quality. Tastes amazing."
                   />
                 </div>
         
-                <div className="min-w-[300px]">
-                  <ReviewCard
-                    name="~ Priya"
-                    review="Amazing taste and very refreshing.
-                    Perfect balance of tea and lemon.
-                    Easy to use and tastes great.
-                    Must give a try.
-                    Loved the aroma and freshness. Will definitely order again."
-                  />
-                </div>
-        
-                <div className="min-w-[300px]">
-                  <ReviewCard
-                    name="~ Karthik"
-                    review="Amazing taste and very refreshing.
-                    Perfect balance of tea and lemon.
-                    Easy to use and tastes great.
-                    Must give a try.
-                    Loved the aroma and freshness. Will definitely order again."
-                  />
-                </div>
+                
               </div>
         
             </div>

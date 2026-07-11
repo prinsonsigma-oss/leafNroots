@@ -472,47 +472,26 @@ const [selectedImage, setSelectedImage] = useState(
                 ref={reviewsRef}
                 className="flex gap-4 overflow-x-auto scroll-smooth scrollbar-hide flex-1 border-none"
               >
+                
+        
                 <div className="min-w-[300px]">
                   <ReviewCard
-                    name="~ Ramesh"
-                    review="Amazing taste and very refreshing.
-                    Perfect balance of tea and lemon.
-                    Easy to use and tastes great.
-                    Must give a try.
-                    Loved the aroma and freshness. Will definitely order again."
+                    name="~ Shabana Parveen"
+                    review="The ginger flavour is strong and natural. Great during cold weather."
                   />
                 </div>
         
                 <div className="min-w-[300px]">
                   <ReviewCard
-                    name="~ Sneha"
-                    review="Amazing taste and very refreshing.
-                    Perfect balance of tea and lemon.
-                    Easy to use and tastes great.
-                    Must give a try.
-                    Loved the aroma and freshness. Will definitely order again."
+                    name="~ Ramesh Bhat"
+                    review="Excellent product for making instant ginger tea."
                   />
                 </div>
         
                 <div className="min-w-[300px]">
                   <ReviewCard
-                    name="~ Amit"
-                    review="Amazing taste and very refreshing.
-                    Perfect balance of tea and lemon.
-                    Easy to use and tastes great.
-                    Must give a try.
-                    Loved the aroma and freshness. Will definitely order again."
-                  />
-                </div>
-        
-                <div className="min-w-[300px]">
-                  <ReviewCard
-                    name="~ Priya"
-                    review="Amazing taste and very refreshing.
-                    Perfect balance of tea and lemon.
-                    Easy to use and tastes great.
-                    Must give a try.
-                    Loved the aroma and freshness. Will definitely order again."
+                    name="~ Anthony Pinto"
+                    review="Very soothing and refreshing. My family loves it."
                   />
                 </div>
         
