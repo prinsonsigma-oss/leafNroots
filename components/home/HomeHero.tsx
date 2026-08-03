@@ -22,7 +22,7 @@ export default function HomeHero() {
   }, []);
 
   return (
-    <section className="relative min-h-[600px] md:min-h-[700px] lg:min-h-[800px] overflow-hidden">
+    <section className="relative min-h-[480px] sm:min-h-[600px] md:min-h-[700px] lg:min-h-[800px] overflow-hidden">
 
       {/* Background Images */}
       {images.map((img, index) => (
@@ -49,7 +49,7 @@ export default function HomeHero() {
       {/* Badge */}
       <div className="inline-flex items-center gap-2 text-black bg-black/20 backdrop-blur-sm px-3 py-2 rounded-full text-[10px] sm:text-xs font-bold tracking-widest uppercase">
         <Leaf size={11} />
-        100% Natural Wellness Extracts
+        Natural Extracts · Just 1–2 Drops
       </div>
 
       {/* Heading */}

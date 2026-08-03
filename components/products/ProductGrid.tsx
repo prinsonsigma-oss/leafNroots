@@ -1,105 +1,60 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { ArrowRight, Check, Leaf } from 'lucide-react'
+import { products as catalog, whyLeafNRoots } from '@/data/products'
 
-export const products = [
-  {
-    id: 'black-lemon-tea',
-    name: 'Black Lemon Tea Extract',
-    description: 'Refreshing blend of black tea and zesty lemon for a revitalizing experience.',
-    image: '/images/product-black-lemon.png',
-    href: '/products/lemontea',
-  },
-  {
-    id: 'irani-chai',
-    name: 'Irani Chai Extract',
-    description: 'Authentic Irani chai with a perfect blend of tea and traditional spices.',
-    image: '/images/product-irani-chai.png',
-    href: '/products/iranichai',
-  },
-  {
-    id: 'ginger',
-    name: 'Ginger Extract',
-    description: 'Pure ginger extract with natural warmth and bold taste.',
-    image: '/images/product-ginger.png',
-    href: '/products/ginger',
-  },
-  {
-    id: 'detox',
-    name: 'Detox Extract',
-    description: 'A refreshing blend of lemon, herbs and spices to support your daily detox.',
-    image: '/images/product-detox.png',
-    href: '/products/detox',
-  },
-  {
-    id: 'kashmir-kahwa',
-    name: 'Kashmir Kahwa Extract',
-    description: 'Traditional Kahwa with saffron, green tea and aromatic spices from Kashmir.',
-    image: '/images/product-kashmir-kahwa.png',
-    href: '/products/kashmirkahwa',
-  },
-  {
-    id: 'cardamom',
-    name: 'Cardamom Extract',
-    description: 'Made from the finest Malenadu cardamom for rich aroma and flavour.',
-    image: '/images/product-cardamom.png',
-    href: '/products/cardamom',
-  },
-  {
-    id: 'masala-chai',
-    name: 'Masala Chai Extract',
-    description: 'Perfect blend of Indian spices and strong chai flavour.',
-    image: '/images/product-masala-chai.png',
-    href: '/products/masalachai',
-  },
-]
+export const products = catalog.map((product) => ({
+  id: product.id,
+  name: product.name,
+  description: product.description,
+  image: product.productImages[0],
+  href: product.href,
+}))
 
-const whyReasons = [
-  'Premium quality natural extracts',
-  'Authentic ingredients from India\'s finest regions',
-  'Advanced extraction for maximum goodness',
-  'Easy to use – just a few drops',
-  'Trusted by thousands of happy customers',
-]
+const whyReasons = whyLeafNRoots.slice(0, 5)
 
 export default function ProductGrid() {
   return (
     <section className="py-16 bg-muted/40">
       <div className="max-w-7xl mx-auto px-4">
-        {/* Heading */}
-        <div className="flex items-center justify-center gap-3 mb-10">
-          <Leaf size={16} className="text-primary" />
+        <div className="flex items-center justify-center gap-2 sm:gap-3 mb-8 sm:mb-10 px-2">
+          <Leaf size={16} className="text-primary shrink-0" />
           <h2
-            className="text-2xl lg:text-3xl font-bold text-foreground tracking-wide uppercase"
+            className="text-xl sm:text-2xl lg:text-3xl font-bold text-foreground tracking-wide uppercase text-center"
             style={{ fontFamily: 'var(--font-playfair)' }}
           >
-            Our Signature Extracts
+            Our Signature Drops
           </h2>
-          <Leaf size={16} className="text-primary" />
+          <Leaf size={16} className="text-primary shrink-0" />
         </div>
 
-        {/* Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-5">
           {products.slice(0, 4).map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}
         </div>
 
-        {/* Second row: 3 products + why choose card */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mt-5">
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-5 mt-3 sm:mt-5">
           {products.slice(4).map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}
 
-          {/* Why Choose Card */}
-          <div className="bg-card border border-border rounded-xl p-6 flex flex-col justify-between shadow-sm">
+          <div className="col-span-2 sm:col-span-1 bg-card border border-border rounded-xl p-4 sm:p-6 flex flex-col justify-between shadow-sm">
             <div>
-              <h3 className="text-lg font-bold text-foreground mb-4" style={{ fontFamily: 'var(--font-playfair)' }}>
-                Why Choose<br />Leaf n Roots?
+              <h3
+                className="text-base sm:text-lg font-bold text-foreground mb-4"
+                style={{ fontFamily: 'var(--font-playfair)' }}
+              >
+                Why Choose
+                <br />
+                Leaf n Roots?
               </h3>
               <ul className="space-y-3">
                 {whyReasons.map((reason) => (
-                  <li key={reason} className="flex items-start gap-2 text-sm text-muted-foreground">
+                  <li
+                    key={reason}
+                    className="flex items-start gap-2 text-xs sm:text-sm text-muted-foreground"
+                  >
                     <Check size={15} className="text-primary shrink-0 mt-0.5" />
                     <span>{reason}</span>
                   </li>
@@ -131,15 +86,20 @@ function ProductCard({ product }: { product: (typeof products)[number] }) {
           className="object-cover group-hover:scale-105 transition-transform duration-500"
         />
       </div>
-      <div className="p-4 space-y-3">
-        <h3 className="font-bold text-foreground text-sm leading-tight" style={{ fontFamily: 'var(--font-playfair)' }}>
+      <div className="p-3 sm:p-4 space-y-2 sm:space-y-3">
+        <h3
+          className="font-bold text-foreground text-xs sm:text-sm leading-tight"
+          style={{ fontFamily: 'var(--font-playfair)' }}
+        >
           {product.name}
         </h3>
-        <p className="text-xs text-muted-foreground leading-relaxed">{product.description}</p>
+        <p className="text-[11px] sm:text-xs text-muted-foreground leading-relaxed line-clamp-3">
+          {product.description}
+        </p>
         <a
           href={product.href}
           rel="noopener noreferrer"
-          className="flex items-center gap-2 border border-primary text-primary px-3 py-2 rounded text-xs font-semibold hover:bg-primary hover:text-primary-foreground transition-colors"
+          className="flex items-center justify-center gap-2 border border-primary text-primary px-3 py-2 rounded text-xs font-semibold hover:bg-primary hover:text-primary-foreground transition-colors"
         >
           View Details
           <ArrowRight size={13} />

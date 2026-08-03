@@ -7,32 +7,32 @@ import { ChevronDown, Menu, X, MessageCircle } from 'lucide-react'
 
 const products = [
   {
-    name: 'Black Lemon Tea Extract',
-    href: '/products/lemontea',
+    name: 'Masala Blend Tea Drops',
+    href: '/products/masalachai',
   },
   {
-    name: 'Irani Chai Extract',
-    href: '/products/iranichai',
-  },
-  {
-    name: 'Ginger Extract',
+    name: 'Ginger Drops',
     href: '/products/ginger',
   },
   {
-    name: 'Detox Extract',
-    href: '/products/detox',
-  },
-  {
-    name: 'Kashmir Kahwa Extract',
-    href: '/products/kashmirkahwa',
-  },
-  {
-    name: 'Cardamom Extract',
+    name: 'Cardamom Drops',
     href: '/products/cardamom',
   },
   {
-    name: 'Masala Chai Extract',
-    href: '/products/masalachai',
+    name: 'Detox Tea Drops',
+    href: '/products/detox',
+  },
+  {
+    name: 'Irani Chai Drops',
+    href: '/products/iranichai',
+  },
+  {
+    name: 'Kashmir Kahwa Drops',
+    href: '/products/kashmirkahwa',
+  },
+  {
+    name: 'Lemon Mint Masala Blend Drops',
+    href: '/products/lemontea',
   },
 ]
 
@@ -85,12 +85,12 @@ export default function Header() {
                   <ChevronDown size={14} className="group-hover:rotate-180 transition-transform" />
                 </Link>
                 {productsOpen && (
-                  <div className="absolute top-full left-0 mt-1 bg-card border border-border rounded-md shadow-lg py-2 w-52 z-50">
+                  <div className="absolute top-full left-0 mt-1 bg-card border border-border rounded-md shadow-lg py-2 w-64 z-50">
                     {products.map((p) => (
                       <Link
                         key={p.href}
                         href={p.href}
-                        className="block px-4 py-2 text-sm text-foreground hover:bg-muted hover:text-primary transition-colors"
+                        className="block px-4 py-2 text-sm text-foreground hover:bg-muted hover:text-primary transition-colors leading-snug"
                       >
                         {p.name}
                       </Link>
@@ -137,20 +137,44 @@ export default function Header() {
 
       {/* Mobile Nav */}
       {mobileOpen && (
-        <div className="md:hidden border-t border-border bg-background px-4 py-4">
-          <nav className="flex flex-col gap-4">
-            {navLinks.map(({ href, label }) => (
-              <Link
-                key={href}
-                href={href}
-                onClick={() => setMobileOpen(false)}
-                className={`text-sm font-medium ${isActive(href) ? 'text-primary font-bold' : 'text-foreground'}`}
-              >
-                {label}
-              </Link>
-            ))}
+        <div className="md:hidden border-t border-border bg-background px-4 py-4 max-h-[calc(100vh-4rem)] overflow-y-auto">
+          <nav className="flex flex-col gap-3">
+            {navLinks.map(({ href, label, hasDropdown }) =>
+              hasDropdown ? (
+                <div key={href} className="flex flex-col gap-2">
+                  <Link
+                    href={href}
+                    onClick={() => setMobileOpen(false)}
+                    className={`text-sm font-medium ${isActive(href) ? 'text-primary font-bold' : 'text-foreground'}`}
+                  >
+                    {label}
+                  </Link>
+                  <div className="ml-3 flex flex-col gap-2 border-l border-border pl-3">
+                    {products.map((p) => (
+                      <Link
+                        key={p.href}
+                        href={p.href}
+                        onClick={() => setMobileOpen(false)}
+                        className={`text-sm ${pathname === p.href ? 'text-primary font-semibold' : 'text-muted-foreground'}`}
+                      >
+                        {p.name}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              ) : (
+                <Link
+                  key={href}
+                  href={href}
+                  onClick={() => setMobileOpen(false)}
+                  className={`text-sm font-medium ${isActive(href) ? 'text-primary font-bold' : 'text-foreground'}`}
+                >
+                  {label}
+                </Link>
+              )
+            )}
             <a
-              href="https://wa.me/917619610605"
+              href="https://wa.me/+917019965445"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center gap-2 bg-primary text-primary-foreground px-4 py-2.5 rounded text-sm font-semibold mt-2"

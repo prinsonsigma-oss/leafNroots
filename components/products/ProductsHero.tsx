@@ -2,15 +2,15 @@ import { Leaf, Ban, FlaskConical, MapPin } from 'lucide-react'
 import Image from 'next/image'
 
 const badges = [
-  { icon: Leaf, label: '100% Natural Ingredients' },
-  { icon: Ban, label: 'No Artificial Flavours' },
-  { icon: FlaskConical, label: 'Lab Tested Quality' },
-  { icon: MapPin, label: 'Made in India' },
+  { icon: Leaf, label: 'Natural Extracts' },
+  { icon: Ban, label: 'No Tea Extract Used' },
+  { icon: FlaskConical, label: 'Just 1–2 Drops' },
+  { icon: MapPin, label: 'Easy to Use' },
 ]
 
 export default function ProductsHero() {
   return (
-    <section className="relative min-h-[600px] md:min-h-[700px] lg:min-h-[800px] overflow-hidden">
+    <section className="relative min-h-[480px] sm:min-h-[600px] md:min-h-[700px] lg:min-h-[800px] overflow-hidden">
   {/* Background Image */}
   <Image
     src="/images/products-hero.png"
@@ -43,9 +43,9 @@ export default function ProductsHero() {
         </h1>
 
         <p className="text-black text-sm sm:text-base lg:text-lg leading-relaxed max-w-2xl">
-          Carefully crafted wellness extracts made from India's finest
-          spices, herbs and botanicals. Just a few drops for a healthier
-          you!
+          100% natural spice & herb extracts — no tea extract, no artificial
+          tea flavour. Just 1–2 drops for tea, coffee, milk, hot water and
+          beverages.
         </p>
 
         {/* Badges */}

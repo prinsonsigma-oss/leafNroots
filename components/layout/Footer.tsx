@@ -10,13 +10,13 @@ const quickLinks = [
 ]
 
 const productLinks = [
-  'Black Lemon Tea Extract',
-  'Irani Chai Extract',
-  'Ginger Extract',
-  'Detox Extract',
-  'Kashmir Kahwa Extract',
-  'Cardamom Extract',
-  'Masala Chai Extract',
+  'Masala Blend Tea Drops',
+  'Ginger Drops',
+  'Cardamom Drops',
+  'Detox Tea Drops',
+  'Irani Chai Drops',
+  'Kashmir Kahwa Drops',
+  'Lemon Mint Masala Blend Drops',
 ]
 
 export default function Footer() {

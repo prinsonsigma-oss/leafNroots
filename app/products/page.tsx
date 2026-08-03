@@ -9,7 +9,7 @@ import BenefitsStrip from '@/components/products/BenefitsStrip'
 export const metadata: Metadata = {
   title: 'Products — Leaf n Roots',
   description:
-    'Explore our signature wellness extracts: Black Lemon Tea, Irani Chai, Ginger, Detox, Kashmir Kahwa, Cardamom, and Masala Chai extracts.',
+    'Explore our signature drops: Masala Blend, Ginger, Cardamom, Detox, Irani Chai, Kashmir Kahwa, and Lemon Mint Masala Blend. 100% natural spice & herb extracts — no tea extract used.',
 }
 
 export default function ProductsPage() {

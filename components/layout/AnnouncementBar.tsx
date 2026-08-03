@@ -42,7 +42,8 @@ export default function AnnouncementBar() {
             className="flex items-center gap-1.5 opacity-90 hover:opacity-100 transition-opacity"
           >
             <Phone size={12} />
-            <span>+91 70199 65445</span>
+            <span className="hidden sm:inline">+91 70199 65445</span>
+            <span className="sm:hidden">Call</span>
           </a>
           <div className="flex items-center gap-2">
             <a href="https://facebook.com/leafnroots.natural" aria-label="Facebook" className="opacity-80 hover:opacity-100 transition-opacity">
