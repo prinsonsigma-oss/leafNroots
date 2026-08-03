@@ -20,14 +20,15 @@ import {
 } from 'lucide-react'
 import {
   keyHighlights,
-  pricing,
+  sizeOptions,
   whyLeafNRoots,
   type Product,
+  type ProductPricing,
 } from '@/data/products'
 
 export default function ProductDetailPage({ product }: { product: Product }) {
   const reviewsRef = useRef<HTMLDivElement>(null)
-  const [selectedSize, setSelectedSize] = useState('5ml')
+  const [selectedSize, setSelectedSize] = useState<keyof ProductPricing>('5ml')
   const [selectedImage, setSelectedImage] = useState(product.productImages[0])
 
   const scrollLeft = () => {
@@ -108,7 +109,7 @@ export default function ProductDetailPage({ product }: { product: Product }) {
 
               <div className="mb-5 sm:mb-6">
                 <span className="text-2xl sm:text-3xl font-bold text-primary">
-                  ₹{pricing[selectedSize as keyof typeof pricing]}
+                  ₹{product.pricing[selectedSize].toLocaleString('en-IN')}
                 </span>
                 <span className="ml-2 text-muted-foreground text-sm sm:text-base">
                   onwards
@@ -124,7 +125,7 @@ export default function ProductDetailPage({ product }: { product: Product }) {
               <div className="mb-6">
                 <h3 className="font-semibold mb-3">Select Size</h3>
                 <div className="flex flex-wrap gap-2 sm:gap-3">
-                  {Object.keys(pricing).map((size) => (
+                  {sizeOptions.map((size) => (
                     <button
                       key={size}
                       onClick={() => setSelectedSize(size)}
@@ -265,12 +266,12 @@ export default function ProductDetailPage({ product }: { product: Product }) {
               </div>
 
               <div className="flex flex-col gap-3">
-                <div className="relative w-full aspect-[4/3] min-h-[220px] sm:min-h-[280px] rounded-2xl overflow-hidden border shadow-lg">
+                <div className="relative w-full aspect-[16/10] min-h-[200px] sm:min-h-[260px] rounded-2xl overflow-hidden border shadow-lg bg-[#f3efe6]">
                   <Image
                     src="/images/pack.png"
-                    alt="Packaging"
+                    alt="Packaging options"
                     fill
-                    className="object-cover"
+                    className="object-contain object-center"
                   />
                 </div>
                 <div className="bg-primary/10 border border-primary/20 rounded-xl px-3 sm:px-4 py-3 flex items-center gap-3 shrink-0">

@@ -8,6 +8,13 @@ export type ProductReview = {
   review: string
 }
 
+export type ProductPricing = {
+  '5ml': number
+  '100ml': number
+  '1 Litre': number
+  '5 Litre': number
+}
+
 export type Product = {
   id: string
   slug: string
@@ -24,14 +31,15 @@ export type Product = {
   howToUse: string
   howToUseSteps: [string, string, string]
   reviews: ProductReview[]
+  pricing: ProductPricing
 }
 
-export const pricing = {
-  '5ml': 243,
-  '100ml': 1200,
-  '1 Litre': 8500,
-  '5 Litre': 35000,
-} as const
+export const sizeOptions: (keyof ProductPricing)[] = [
+  '5ml',
+  '100ml',
+  '1 Litre',
+  '5 Litre',
+]
 
 export const keyHighlights = [
   'Natural Extracts',
@@ -58,6 +66,12 @@ export const products: Product[] = [
     description:
       'Rich authentic Indian masala chai flavour — a convenient alternative to whole spices.',
     href: '/products/masalachai',
+    pricing: {
+      '5ml': 270,
+      '100ml': 1350,
+      '1 Litre': 12500,
+      '5 Litre': 45000,
+    },
     productImages: [
       '/images/product-masala-chai.png',
       '/images/client-masala-1.png',
@@ -73,8 +87,6 @@ export const products: Product[] = [
       { name: 'Cinnamon Extract', image: '/images/cinnamon.png' },
       { name: 'Clove Extract', image: '/images/clove.png' },
       { name: 'Black Pepper Extract', image: '/images/pepper.png' },
-      { name: 'Natural Spice Oleoresins', image: '/images/ingredient-spice-oleoresins.png' },
-      { name: 'Food Grade Carrier', image: '/images/ingredient-food-grade-carrier.png' },
     ],
     benefits: [
       'Rich authentic Indian masala chai flavour',
@@ -113,6 +125,12 @@ export const products: Product[] = [
     description:
       'Natural ginger extract that adds a refreshing spicy flavour to tea, coffee and recipes.',
     href: '/products/ginger',
+    pricing: {
+      '5ml': 170,
+      '100ml': 750,
+      '1 Litre': 7000,
+      '5 Litre': 30000,
+    },
     productImages: [
       '/images/product-ginger.png',
       '/images/client-ginger-1.png',
@@ -124,7 +142,6 @@ export const products: Product[] = [
     howToUseBackground: '/images/client-ginger-3.png',
     ingredients: [
       { name: 'Natural Ginger Extract', image: '/images/ginger.png' },
-      { name: 'Food Grade Carrier', image: '/images/ingredient-food-grade-carrier.png' },
     ],
     benefits: [
       'Supports healthy digestion',
@@ -162,6 +179,12 @@ export const products: Product[] = [
     description:
       'Premium cardamom aroma that gives café-style taste to tea, coffee and desserts.',
     href: '/products/cardamom',
+    pricing: {
+      '5ml': 270,
+      '100ml': 1350,
+      '1 Litre': 12500,
+      '5 Litre': 45000,
+    },
     productImages: [
       '/images/product-cardamom.png',
       '/images/client-cardamom-1.png',
@@ -173,7 +196,6 @@ export const products: Product[] = [
     howToUseBackground: '/images/client-cardamom-3.png',
     ingredients: [
       { name: 'Natural Cardamom Extract', image: '/images/cardomom.png' },
-      { name: 'Food Grade Carrier', image: '/images/ingredient-food-grade-carrier.png' },
     ],
     benefits: [
       'Premium cardamom aroma',
@@ -211,6 +233,12 @@ export const products: Product[] = [
     description:
       'Refreshing herbal blend for a pleasant daily wellness drink.',
     href: '/products/detox',
+    pricing: {
+      '5ml': 170,
+      '100ml': 750,
+      '1 Litre': 7000,
+      '5 Litre': 30000,
+    },
     productImages: [
       '/images/product-detox.png',
       '/images/client-detox-1.png',
@@ -250,7 +278,7 @@ export const products: Product[] = [
         review: 'Simple to use and feels clean and natural every day.',
       },
       {
-        name: '~ Priya D’Souza',
+        name: "~ Priya D'Souza",
         review: 'Great alternative to brewing herbs from scratch.',
       },
     ],
@@ -263,6 +291,12 @@ export const products: Product[] = [
     description:
       'Authentic Irani café flavour with rich aroma for an everyday indulgence.',
     href: '/products/iranichai',
+    pricing: {
+      '5ml': 310,
+      '100ml': 2150,
+      '1 Litre': 20500,
+      '5 Litre': 71500,
+    },
     productImages: [
       '/images/product-irani-chai.png',
       '/images/client-irani-1.png',
@@ -276,8 +310,6 @@ export const products: Product[] = [
       { name: 'Cardamom Extract', image: '/images/cardomom.png' },
       { name: 'Cinnamon Extract', image: '/images/cinnamon.png' },
       { name: 'Lemon grass extract', image: '/images/lemongrass.png' },
-      { name: 'Natural Spice Oleoresins', image: '/images/ingredient-spice-oleoresins.png' },
-      { name: 'Food Grade Carrier', image: '/images/ingredient-food-grade-carrier.png' },
     ],
     benefits: [
       'Authentic Irani café flavour',
@@ -302,7 +334,7 @@ export const products: Product[] = [
         review: 'Rich aroma and premium taste in every cup.',
       },
       {
-        name: '~ Joseph D’Silva',
+        name: "~ Joseph D'Silva",
         review: 'My daily milk tea feels luxurious now.',
       },
     ],
@@ -315,6 +347,12 @@ export const products: Product[] = [
     description:
       'Authentic Kashmiri Kahwa flavour with rich saffron aroma — traditional taste, instantly.',
     href: '/products/kashmirkahwa',
+    pricing: {
+      '5ml': 280,
+      '100ml': 1350,
+      '1 Litre': 12500,
+      '5 Litre': 45000,
+    },
     productImages: [
       '/images/product-kashmir-kahwa.png',
       '/images/client-kahwa-1.png',
@@ -329,8 +367,6 @@ export const products: Product[] = [
       { name: 'Cardamom Extract', image: '/images/cardomom.png' },
       { name: 'Cinnamon Extract', image: '/images/cinnamon.png' },
       { name: 'Almond oil', image: '/images/ingredient-almond-oil.png' },
-      { name: 'Natural Spice Oleoresins', image: '/images/ingredient-spice-oleoresins.png' },
-      { name: 'Food Grade Carrier', image: '/images/ingredient-food-grade-carrier.png' },
     ],
     benefits: [
       'Authentic Kashmiri Kahwa flavour',
@@ -369,6 +405,12 @@ export const products: Product[] = [
     description:
       'Fresh lemon and mint flavour with a zesty twist — perfect for summer drinks.',
     href: '/products/lemontea',
+    pricing: {
+      '5ml': 200,
+      '100ml': 900,
+      '1 Litre': 8000,
+      '5 Litre': 32000,
+    },
     productImages: [
       '/images/product-black-lemon.png',
       '/images/client-lemonmint-1.png',
@@ -382,8 +424,6 @@ export const products: Product[] = [
       { name: 'Lemon Extract', image: '/images/lemon.png' },
       { name: 'Mint Extract', image: '/images/ingredient-mint.png' },
       { name: 'Ginger Extract', image: '/images/ginger.png' },
-      { name: 'Natural Spice Oleoresins', image: '/images/ingredient-spice-oleoresins.png' },
-      { name: 'Food Grade Carrier', image: '/images/ingredient-food-grade-carrier.png' },
     ],
     benefits: [
       'Fresh lemon and mint flavour',
