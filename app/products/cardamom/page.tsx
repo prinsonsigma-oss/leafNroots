@@ -9,8 +9,10 @@ import { Star, CheckCircle2, CheckCircle, ShoppingBag, Droplets, CupSoda, Smile,
 export default function ProductDetails() {
   const productImages = [
   "/images/product-cardamom.png",
-  "/images/card.png",
-  "/images/cup.jpeg",
+  "/images/cardamom-1.jpeg",
+  "/images/ginger.jpeg",
+  "/images/ginger-2.jpeg"
+  
 ];
   const reviewsRef = useRef<HTMLDivElement>(null);
 

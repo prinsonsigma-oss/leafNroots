@@ -9,8 +9,7 @@ import { Star, CheckCircle2, CheckCircle, ShoppingBag, Droplets, CupSoda, Smile,
 export default function ProductDetails() {
   const productImages = [
   "/images/product-masala-chai.png",
-  "/images/masala.png",
-  "/images/cup.jpeg",
+  "/images/masala.png"
 ];
   const reviewsRef = useRef<HTMLDivElement>(null);
 

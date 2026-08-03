@@ -9,8 +9,7 @@ import { Star, CheckCircle2, CheckCircle, ShoppingBag, Droplets, CupSoda, Smile,
 export default function ProductDetails() {
   const productImages = [
   "/images/product-irani-chai.png",
-  "/images/iranichai.png",
-  "/images/cup.jpeg",
+  "/images/iranichai.png"
 ];
   const reviewsRef = useRef<HTMLDivElement>(null);
 

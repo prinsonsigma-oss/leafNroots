@@ -9,8 +9,7 @@ import { Star, CheckCircle2, CheckCircle, ShoppingBag, Droplets, CupSoda, Smile,
 export default function ProductDetails() {
   const productImages = [
   "/images/product-detox.png",
-  "/images/detoxchai.png",
-  "/images/cup.jpeg",
+  "/images/lemon.jpeg"
 ];
   const reviewsRef = useRef<HTMLDivElement>(null);
 

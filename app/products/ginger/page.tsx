@@ -10,7 +10,9 @@ export default function ProductDetails() {
   const productImages = [
   "/images/product-ginger.png",
   "/images/gingerchai.png",
-  "/images/cup.jpeg",
+  "/images/ginger.jpeg",
+  "/images/ginger-2.jpeg",
+  "/images/lemon.jpeg"
 ];
   const reviewsRef = useRef<HTMLDivElement>(null);
 
