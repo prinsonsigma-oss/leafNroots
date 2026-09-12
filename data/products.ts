@@ -126,7 +126,7 @@ export const products: Product[] = [
       'Natural ginger extract that adds a refreshing spicy flavour to tea, coffee and recipes.',
     href: '/products/ginger',
     pricing: {
-      '5ml': 170,
+      '5ml': 270,
       '100ml': 750,
       '1 Litre': 7000,
       '5 Litre': 30000,
@@ -234,7 +234,7 @@ export const products: Product[] = [
       'Refreshing herbal blend for a pleasant daily wellness drink.',
     href: '/products/detox',
     pricing: {
-      '5ml': 170,
+      '5ml': 270,
       '100ml': 750,
       '1 Litre': 7000,
       '5 Litre': 30000,
@@ -292,7 +292,7 @@ export const products: Product[] = [
       'Authentic Irani café flavour with rich aroma for an everyday indulgence.',
     href: '/products/iranichai',
     pricing: {
-      '5ml': 310,
+      '5ml': 270,
       '100ml': 2150,
       '1 Litre': 20500,
       '5 Litre': 71500,
@@ -348,7 +348,7 @@ export const products: Product[] = [
       'Authentic Kashmiri Kahwa flavour with rich saffron aroma — traditional taste, instantly.',
     href: '/products/kashmirkahwa',
     pricing: {
-      '5ml': 280,
+      '5ml': 270,
       '100ml': 1350,
       '1 Litre': 12500,
       '5 Litre': 45000,
@@ -406,7 +406,7 @@ export const products: Product[] = [
       'Fresh lemon and mint flavour with a zesty twist — perfect for summer drinks.',
     href: '/products/lemontea',
     pricing: {
-      '5ml': 200,
+      '5ml': 270,
       '100ml': 900,
       '1 Litre': 8000,
       '5 Litre': 32000,
